@@ -1,0 +1,32 @@
+﻿@model Studentcourses.Models.Student
+
+@using Studentcourses.Models
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="display-label">
+    <b>Name</b>
+</div>
+<div class="display-field">
+    @Html.DisplayFor(model => model.Name)
+</div>
+<div class="display-label">
+    <b>Surname</b>
+</div>
+<div class="display-field">
+    @Html.DisplayFor(model => model.Surname)
+</div>
+<div class="display-label">
+    <b>Courses</b>
+</div>
+<div>
+    <ul>
+    @foreach(Cours c in Model.Courses){
+    <li>@c.Name</li>
+    }
+    </ul>
+</div>
